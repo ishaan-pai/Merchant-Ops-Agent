@@ -1,0 +1,15 @@
+# tests/questions.yaml
+- question: "How many orders did we get last week?"
+  expect_tools: [get_orders]
+  expect_in_answer: ["14"]
+
+- question: "Why were sales down last week?"
+  expect_tools: [get_orders]
+  expect_in_answer: ["gift card", "draft"]
+
+- question: "What's the weather in Toronto?"
+  expect_tools: []
+  expect_in_answer: []
+
+- question: "Make a 20% off code SAVE20 for 3 days"
+  expect_interrupt: create_discount
